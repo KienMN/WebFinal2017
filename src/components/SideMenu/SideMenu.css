@@ -1,0 +1,11 @@
+
+.menu{
+    width: 300px;
+}
+button {
+    position: relative; 
+    float: right;
+}
+#title {
+    font-size: 18px;
+}
