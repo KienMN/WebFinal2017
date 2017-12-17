@@ -43,7 +43,7 @@ export class SubSideMenu extends React.Component {
     }
 }
 
-SideMenu.defaultProps = {
+SubSideMenu.defaultProps = {
   name: 'Side menu',
   all: 12,
   new: 0,
