@@ -1,9 +1,7 @@
 
-.menu{
-    width: 300px;
-}
+
 button {
-    position: relative; 
+    position: relative;
     float: right;
 }
 #title {
