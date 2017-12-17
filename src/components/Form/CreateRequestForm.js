@@ -8,6 +8,7 @@ import { Editor } from './Editor';
  * data-flow???
  * Chuyen deadline tu Date -> millis
  * Them mot so chu y// Lam sau  
+ * submit chua lam
  * @va
  */
 
@@ -52,7 +53,7 @@ export class CreateRequestForm extends React.Component {
             }, 
             {
                 dept_id: "1",
-                dept_name: "Digital World"
+                dept_name: "Đà Nẵng IT"
             }    
         ];
 
@@ -108,7 +109,7 @@ export class CreateRequestForm extends React.Component {
                         <div className="col-lg-6">
                             <div className={"form-group " + this.state.deadline_st}>
                                 <label>Ngày hết hạn</label>
-                                <DayPickerInput 
+                                <DayPickerInput     
                                     onDayChange={this.handleDayChange}
                                 />
                             </div>
@@ -123,7 +124,7 @@ export class CreateRequestForm extends React.Component {
                
                     <div className="row" >
                          <div className="col-lg-12">
-                            
+                            <label>Nội dung</label>
                             <Editor onChange={this.handleEditorChange}/>
                             <div className="form-group">
                                 <label>Choose file to upload</label>
