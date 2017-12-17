@@ -1,5 +1,5 @@
 import React from 'react';
-import './SideMenu.css';
+import './SubSideMenu.css';
 import { SubItem } from './SubItem';
 /**
  * Inprogress: 
@@ -7,7 +7,7 @@ import { SubItem } from './SubItem';
  * different subItems for each sidemenu
  * toggle
  */
-export class SideMenu extends React.Component {
+export class SubSideMenu extends React.Component {
     constructor(props) {
       super(props);
       this.state = {

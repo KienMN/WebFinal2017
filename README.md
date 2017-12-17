@@ -1,9 +1,25 @@
 
-#WebFinal201
-call-log-it
-Tool giao việc cho bộ phận IT tích hợp trên hệ thống Intranet
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## WebFinal2017
+call-log-it <br>
+Tool giao việc cho bộ phận IT tích hợp trên hệ thống Intranet.<br>
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).<br>
 
+## Requirement
+```
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "moment": "^2.20.0",
+    "react": "^16.2.0",
+    "react-day-picker": "^7.0.5",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17"
+```
+
+## Installation 
+```
+  npm install react react-dom jquery bootstrap@3 moment react-datepicker --save
+  npm start
+```
 ## Folder Structure
 
 ```
@@ -84,3 +100,9 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Ref
+Moment.js Documentation<br>
+http://momentjs.com/docs/#/parsing/ <br>
+
+React-datepicker Documentation <br>
+https://hacker0x01.github.io/react-datepicker/ <br>
