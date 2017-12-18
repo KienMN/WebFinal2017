@@ -18,31 +18,31 @@ class RequestTable extends React.Component {
 	render() {
 		return (
 			<div id="page-wrapper">
-			<div className="row">
-				<div className="col-lg-12">
-					<div className="panel panel-default">
-						<div className="panel-heading">
-							{this.state.title}
-						</div>
-						<div className="panel-body">
-							<div className="dataTable_wrapper">
-								<table className="table table-striped table-bordered table-hover" id="requestTable">
-									<thead>
-										<tr>
-											<th>STT</th>
-											{this.state.tableHeads.map((tableHead, index) => <th>{tableHead}</th>)}
-										</tr>
-									</thead>
-									<tbody>
-										{this.state.tableData.map((request, index) => <TableRow key = {index} data = {request} />)}
-									</tbody>
-								</table>
+				<div className="row">
+					<div className="col-lg-12">
+						<div className="panel panel-default">
+							<div className="panel-heading">
+								{this.state.title}
+							</div>
+							<div className="panel-body">
+								<div className="dataTable_wrapper">
+									<table className="table table-striped table-bordered table-hover" id="requestTable">
+										<thead>
+											<tr>
+												<th>STT</th>
+												{this.state.tableHeads.map((tableHead, index) => <th key={index}>{tableHead}</th>)}
+											</tr>
+										</thead>
+										<tbody>
+											{this.state.tableData.map((request, index) => <TableRow key = {index} data = {request} />)}
+										</tbody>
+									</table>
 
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 			</div>
 		);
 	}
