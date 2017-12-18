@@ -1,14 +1,13 @@
 import React from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
+import moment from 'moment';
 import './CreateRequestForm.css';
 import { Editor } from './Editor';
 
 /**
  * Chua ro mot so muc 
  * data-flow???
- * Chuyen deadline tu Date -> millis
- * Them mot so chu y// Lam sau  
- * submit chua lam
+ * Them mot so chu y validate 
  * @va
  */
 
@@ -20,18 +19,21 @@ export class CreateRequestForm extends React.Component {
             employee_id: '', assigned_to: '',
             team_id: '', subject: '',
             content: '', priority: '',
-            deadline: 0, relaters: '', image: '',
+            deadline: undefined, //in mills 
+            relaters: '', image: '',
 
             content_set: false, content_st:'', sub_st:'', 
             deadline_set: false, deadline_st: ''
         }
+      
         this.handleDayChange = this.handleDayChange.bind(this);
         this.validate = this.validate.bind(this);
         this.handleEditorChange = this.handleEditorChange.bind(this);
     }
+   
     handleDayChange(date) {
         this.setState({
-          deadline: date, 
+          deadline: moment(date).format('x'), 
           deadline_set: true
         });
       }
@@ -45,6 +47,7 @@ export class CreateRequestForm extends React.Component {
         (this.state.subject.trim() === "") ? this.setState({sub_st: "has-error"}) : this.setState({sub_st: ""})   
         !(this.state.deadline_set) ? this.setState({deadline_st: "has-error"}) : this.setState({deadline_st: ""}) 
         !(this.state.content_set) ? this.setState({content_st: "has-error"}) : this.setState({content_st: ""})   
+      
     }
     render() {
         const dept_info = [
