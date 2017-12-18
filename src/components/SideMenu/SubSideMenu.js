@@ -29,7 +29,7 @@ export class SubSideMenu extends React.Component {
               <button className="btn btn-link" data-toggle="collapse" data-target="#colapse-list"><span className="glyphicon glyphicon-option-horizontal"></span>
               </button>
             </div>
-            <div style={{width: 300}} id="colapse-list">
+            <div  id="colapse-list">
               <ul className="list-group">
                 <SubItem index="0" name="All" request_count={this.state.all}/>
                 <SubItem index="1" name="New" request_count={this.state.new}/>

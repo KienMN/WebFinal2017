@@ -1,14 +1,75 @@
 .box-header.with-border {
-    
-        border-bottom: 1px solid #f4f4f4;
-    
-    }
+    border-bottom: 1px solid #f4f4f4;
+}
 .box-header { 
-        color: #444;
-        display: block;
-        padding: 10px;
-        position: relative;
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
 }
 .user-block {
     box-sizing: border-box;
+}
+
+a:hover, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #72afd2;
+}
+.username {
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.user-block .description {
+    color: #999;
+    font-size: 13px;
+}
+.user-block .username, .user-block .description, .user-block .comment {
+    display: block;
+}
+.user-block img {
+    float: left;
+    margin-right: 20px;
+}
+.box-header.with-border {
+    border-bottom: 1px solid #f4f4f4;
+}
+.box-header { 
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px 10px 10px 100px;
+}
+.pull-right {
+    float: right !important;
+}
+p {    
+    margin: 0 0 10px;
+}
+.box-comments {        
+    background: #f7f7f7;
+}
+.box-footer {        
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid #f4f4f4;
+    padding: 30px 10px 10px 10px;
+    background-color: #fff;    
+}
+.editor-comments {
+    margin-left: 90px;
+}
+button {
+    margin: 10px;
 }
