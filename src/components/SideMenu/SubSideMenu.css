@@ -1,9 +1,8 @@
-
-
 button {
-    position: relative;
+    position: static;
     float: right;
 }
 #title {
     font-size: 18px;
+    margin: 12px;
 }

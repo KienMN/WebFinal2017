@@ -23,13 +23,15 @@ export class SubSideMenu extends React.Component {
     render() {
   
       return(
-          <div className="menu">
+          <div style={{width: 300}} className="menu">
             <div id="title">
-              {this.state.name} 
-              <button className="btn btn-link" data-toggle="collapse" data-target="#colapse-list"><span className="glyphicon glyphicon-option-horizontal"></span>
-              </button>
+              {this.state.name}   
+            <button className="btn btn-link" data-toggle="collapse" data-target="#colapse-list">
+              <span className="glyphicon glyphicon-option-horizontal"></span>
+            </button>
             </div>
-            <div  id="colapse-list">
+            
+            <div style={{width: 300}} id="colapse-list">
               <ul className="list-group">
                 <SubItem index="0" name="All" request_count={this.state.all}/>
                 <SubItem index="1" name="New" request_count={this.state.new}/>
@@ -45,9 +47,9 @@ export class SubSideMenu extends React.Component {
 
 SubSideMenu.defaultProps = {
   name: 'Side menu',
-  all: 12,
-  new: 0,
+  all: 18,
+  new: 12,
   inprogress: 5,
   resolved: 0,
-  outdate: 0
+  outdate: 1
 };

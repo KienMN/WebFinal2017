@@ -19,18 +19,20 @@ export class SubItem extends React.Component {
     }
     
     render() {
-        const icons = ["glyphicon glyphicon-inbox", 
-        "glyphicon glyphicon-star-empty",  
-        "glyphicon glyphicon-import", 
-        "glyphicon glyphicon-registration-mark",
-        "glyphicon glyphicon-calendar"];
-        
+  
+        const icons = [
+            {label: "label label-primary", gly: "glyphicon glyphicon-inbox"}, 
+            {label: "label label-success", gly: "glyphicon glyphicon-star-empty"}, 
+            {label: "label label-info", gly: "glyphicon glyphicon-import"}, 
+            {label: "label label-warning", gly: "glyphicon glyphicon-registration-mark"}, 
+            {label: "label label-danger", gly: "glyphicon glyphicon-calendar"}];
+
         return(
             (this.state.is_show) ? 
             <li className="list-group-item">
-                <span className={icons[this.props.index]}></span> {"  " + this.props.name}
+                <span className={icons[this.props.index].gly}></span> {"  " + this.props.name}
                 { (this.props.request_count > 0) ? 
-                 <span className="badge">{this.props.request_count}</span>
+                 <span style={{float: 'right'}}className={icons[this.props.index].label}>{this.props.request_count}</span>
                  : <span></span>
                 }
             </li> 
