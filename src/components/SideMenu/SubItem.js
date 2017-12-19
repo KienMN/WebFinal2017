@@ -25,7 +25,9 @@ export class SubItem extends React.Component {
             {label: "label label-success", gly: "glyphicon glyphicon-star-empty"}, 
             {label: "label label-info", gly: "glyphicon glyphicon-import"}, 
             {label: "label label-warning", gly: "glyphicon glyphicon-registration-mark"}, 
-            {label: "label label-danger", gly: "glyphicon glyphicon-calendar"}];
+            {label: "label label-danger", gly: "glyphicon glyphicon-calendar"},
+            {label: "label label-default", gly: "glyphicon glyphicon-send"}
+        ];
 
         return(
             (this.state.is_show) ? 

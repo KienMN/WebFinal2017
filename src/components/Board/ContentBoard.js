@@ -2,7 +2,6 @@ import React from 'react';
 import {Comment} from './Comment'
 import {Editor} from '../Form/Editor'
 import './ContentBoard.css'
-import ReactDOM from 'react-dom'
 /**
  * Show Request's content and comments
  * @va
@@ -80,7 +79,8 @@ export class ContentBoard extends React.Component {
                         
                         {/*Create a new comment*/}
                         <div className="editor-comments">
-                            <Editor change={this.state.editor_change} onChange={this.handleEditorChange}/>
+                            <Editor change={this.state.editor_change} onChange={this.handleEditorChange}
+                                    placeholder="Bình luận mới ..."/>
                             <button className="btn btn-primary" onClick={this.handleSubmit}>Comment</button>
                         </div>
 

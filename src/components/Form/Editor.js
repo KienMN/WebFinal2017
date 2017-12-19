@@ -31,15 +31,15 @@ export class Editor extends Component {
     (this.props.change ==='') ? 
     <RichTextEditor
       value={RichTextEditor.createEmptyValue()}
-      placeholder=" Bình luận mới ..."
+      placeholder={this.props.placeholder}
       onChange={this.onChange}   
     />  : 
     <RichTextEditor
       value={this.state.value}
-      placeholder=" Bình luận mới ..."
+      placeholder={this.props.placeholder}
       onChange={this.onChange}   
     />  
     );
-  
+
   }
 }

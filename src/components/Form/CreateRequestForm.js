@@ -128,7 +128,7 @@ export class CreateRequestForm extends React.Component {
                     <div className="row" >
                          <div className="col-lg-12">
                             <label>Nội dung</label>
-                            <Editor onChange={this.handleEditorChange}/>
+                            <Editor placeholder="Nhập vào nội dung" onChange={this.handleEditorChange}/>
                             <div className="form-group">
                                 <label>Choose file to upload</label>
                                 <input type="file" />
@@ -136,7 +136,7 @@ export class CreateRequestForm extends React.Component {
                          </div>
                     </div>
                     
-                    <button type="submit" className="btn btn-primary" onClick={this.validate}>Submit Button</button>
+                    <button type="submit" className="btn btn-primary" onClick={this.validate}>Submit</button>
                 </div>    
             </div>
         );
