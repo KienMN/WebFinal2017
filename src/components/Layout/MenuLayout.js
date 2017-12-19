@@ -3,6 +3,7 @@ import HeaderNavbar from '../HeaderNavbar';
 import { ContentBoard } from '../Board/ContentBoard';
 import {CreateRequestForm} from '../Form/CreateRequestForm'
 import { SideMenu } from '../SideMenu/SideMenu';
+import RequestTable from '../RequestTable';
 /**
  * Layout having 2 columns A1
  * @va
@@ -18,7 +19,8 @@ export class MenuLayout extends React.Component {
                    <SideMenu />
                 </div>
                 <div className="col-lg-9">
-                    <CreateRequestForm />
+                    {/*<CreateRequestForm />*/}
+                    <RequestTable />
                 </div>
                 </div>
             </div>
