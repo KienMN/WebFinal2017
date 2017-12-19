@@ -1,26 +1,34 @@
 import React from 'react';
 import HeaderNavbar from '../HeaderNavbar';
-import { ContentBoard } from '../Board/ContentBoard';
-import {CreateRequestForm} from '../Form/CreateRequestForm'
 import { SideMenu } from '../SideMenu/SideMenu';
 import RequestTable from '../RequestTable';
-/**
+import {
+    Route,
+    Link,
+
+  } from 'react-router-dom'
+
+  /**
  * Layout having 2 columns A1
  * @va
  */
-export class MenuLayout extends React.Component {
+export class TableLayout extends React.Component {
+    constructor(props) {
+        super(props);
+        
+    }
     render() {
+        
         return(
-        <div>
+        <div>  
             <HeaderNavbar />
             <div style={{paddingTop: 70}} className="container-fluid">
                 <div className="row">
                 <div className="col-lg-3">  
-                   <SideMenu />
+                   <SideMenu user_id={this.props.match.params.user_id} />
                 </div>
-                <div className="col-lg-9">
-                    {/*<CreateRequestForm />*/}
-                    <RequestTable />
+                <div id="dashboard"className="col-lg-9">
+                    <RequestTable user_id={this.props.match.params.user_id} status='0'/>  
                 </div>
                 </div>
             </div>

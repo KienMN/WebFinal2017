@@ -9,7 +9,7 @@ export class LoginLayout extends Component {
                         };
     return (
      
-      <div style={loginStyles} className="container">
+      <div style={loginStyles} id="login-container" className="container">
         <LoginForm />
         </div>
       

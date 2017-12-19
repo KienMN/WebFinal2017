@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
-import { MenuLayout } from './components/Layout/MenuLayout';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom';
+import {TableLayout } from './components/Layout/TableLayout';
+import {LoginLayout} from './components/Layout/LoginLayout';
+import {CreateRequestLayout} from './components/Layout/CreateRequestLayout';
+import {ContentLayout} from './components/Layout/ContenLayout';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-       <MenuLayout />
+        <Switch>
+          <Route path="/login" component={LoginLayout}/>
+          <Route path="/user/:user_id/dashboard/create" component={CreateRequestLayout}/>
+          <Route path="/user/:user_id/dashboard" component={TableLayout}/>
+          <Route path="/user/:user_id/dashboard/requests/:request_id" component={ContentLayout}/>
+        </Switch>
       </div>
     );
   }

@@ -12,7 +12,7 @@ import { Editor } from './Editor';
  */
 
 export class CreateRequestForm extends React.Component {
-   
+    //props: user_id
     constructor(props) {
         super(props);
         this.state = {

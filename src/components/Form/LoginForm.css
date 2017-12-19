@@ -1,18 +1,7 @@
-html, body {
-    height: 100%;
-  }
-    
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Helvetica Neue;
+#login-container.container {
+  width: 500px;
+  margin-top: 10%;
 }
-  
-  .container {
-    width: 500px;
-  }
-  
   .note {
     color: gray;
     margin: 8px 0;
@@ -25,7 +14,6 @@ body {
   input.active:invalid {
     box-shadow: 0 0 5px 1px red;
   }
-  
   .error {
     color: red;
     font-size: 12px;

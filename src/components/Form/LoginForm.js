@@ -89,7 +89,7 @@ export class LoginForm extends React.Component {
   
     render() {
       return (
-        <form noValidate>
+        <form id="login-form" noValidate>
           <div className="form-group">
             <label id="usernameLabel">Username</label>
             <input className="form-control"
@@ -125,8 +125,8 @@ export class LoginForm extends React.Component {
               required />
             <div className="error" id="passwordConfirmError" />
           </div>
-          <button className="btn btn-primary"
-            onClick={ this.handleSubmit }>submit</button>
+          <button className="btn btn-primary pull-right btn-lg"
+            onClick={ this.handleSubmit }>Login</button>
         </form>
       );
     }
