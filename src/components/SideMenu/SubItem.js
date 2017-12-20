@@ -23,8 +23,8 @@ export class SubItem extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
     //cannot found #dashboard
-    handleClick() {
-        
+    handleClick() {      
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
         ReactDOM.render(<RequestTable user_id={this.props.user_id} status={this.props.index}/>, 
                         document.getElementById("dashboard") );    
     }

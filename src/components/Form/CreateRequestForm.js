@@ -3,6 +3,7 @@ import DayPickerInput from 'react-day-picker/DayPickerInput';
 import moment from 'moment';
 import './CreateRequestForm.css';
 import { Editor } from './Editor';
+import { Link } from 'react-router-dom';
 
 /**
  * Chua ro mot so muc 
@@ -48,6 +49,9 @@ export class CreateRequestForm extends React.Component {
         !(this.state.deadline_set) ? this.setState({deadline_st: "has-error"}) : this.setState({deadline_st: ""}) 
         !(this.state.content_set) ? this.setState({content_st: "has-error"}) : this.setState({content_st: ""})   
       
+    }
+    cancel() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
     render() {
         const dept_info = [
@@ -136,7 +140,10 @@ export class CreateRequestForm extends React.Component {
                          </div>
                     </div>
                     
-                    <button type="submit" className="btn btn-primary" onClick={this.validate}>Submit</button>
+                    <button type="submit" className="btn btn-primary pull-right" onClick={this.validate}>Submit</button>
+                    <Link to={"/user/:user_id/dashboard"}>
+                    <button type="cancel" className="btn btn-default pull-right" onClick={this.cancel}>Cancel</button>
+                    </Link>
                 </div>    
             </div>
         );

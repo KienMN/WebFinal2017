@@ -21,18 +21,18 @@ export class SubSideMenu extends React.Component {
     }
 
     render() {
-      
+       
       return(
           <div style={{width: 300}} className="menu">
             <div id="title">
               {this.props.name}   
-            <button className="btn btn-link" data-toggle="collapse" data-target={"#colapse-list" + this.props.type}>
+            <button className="btn btn-link" data-toggle="collapse" data-parent="#accordion" data-target={"#colapse-list" + this.props.type}>
               <span className="glyphicon glyphicon-option-horizontal"></span>
             </button>
             </div>
           
-            <div style={{width: 300}} id={"colapse-list" + this.props.type}>
-            <ul className="list-group">
+            <div style={{width: 300}} className="panel-collapse collapse in" id={"colapse-list" + this.props.type}>
+            <ul className="list-group"> 
                 <SubItem user_id={this.props.user_id} index={0} name="All" request_count={this.state.all}/>
                 <SubItem user_id={this.props.user_id} index={1} name="New" request_count={this.state.new}/>
                 <SubItem user_id={this.props.user_id} index={2} name="Inprocess" request_count={this.state.inprogress}/>
