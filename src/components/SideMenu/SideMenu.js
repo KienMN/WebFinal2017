@@ -11,7 +11,7 @@ export class SideMenu extends React.Component {
        
         return(
             //props: user_id => get type of employee(user_id)
-            <div id="sideMenu">
+            <div style={{width: 310}} id="sideMenu">
             
                 {/*<h2 style={{marginTop: 0, marginLeft:12, color: 'white'}}>REQUEST IT</h2>*/}
                 <Link to={"/user/"+ this.props.user_id + "/dashboard/create"}>

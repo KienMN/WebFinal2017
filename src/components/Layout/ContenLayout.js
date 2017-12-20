@@ -14,10 +14,7 @@ export class ContentLayout extends React.Component {
             <HeaderNavbar />
             <div style={{paddingTop: 70}} className="container-fluid">
                 <div className="row">
-                <div className="col-lg-3">  
-                   <SideMenu user_id={this.props.match.params.user_id} />
-                </div>
-                <div id="dashboard" className="col-lg-9">
+                <div id="dashboard" className="col-lg-12">
                     <ContentBoard />
                 </div>
                 </div>

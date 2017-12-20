@@ -5,6 +5,7 @@ import RequestTable from '../RequestTable';
 import {
     Route,
     Link,
+    Switch,
 
   } from 'react-router-dom'
 
@@ -28,7 +29,9 @@ export class TableLayout extends React.Component {
                    <SideMenu user_id={this.props.match.params.user_id} />
                 </div>
                 <div id="dashboard"className="col-lg-9">
-                    <RequestTable user_id={this.props.match.params.user_id} status='0'/>  
+                <Switch>
+                    <RequestTable user_id={this.props.match.params.user_id} status={0}/>    
+                </Switch>   
                 </div>
                 </div>
             </div>

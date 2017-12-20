@@ -18,3 +18,7 @@
     font-size: 18px;
     margin: 12px;
 }
+button.list-group-item:focus {
+    border-left-color: #5BC0DE;
+    border-left-width: 3px;
+}

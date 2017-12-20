@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import RequestTable from '../RequestTable';
 import {Link, Route, Router} from 'react-router-dom';
+
 /** 
   * Components: SubItem
   * In progress
@@ -23,6 +24,7 @@ export class SubItem extends React.Component {
     }
     //cannot found #dashboard
     handleClick() {
+        
         ReactDOM.render(<RequestTable user_id={this.props.user_id} status={this.props.index}/>, 
                         document.getElementById("dashboard") );    
     }
@@ -43,7 +45,7 @@ export class SubItem extends React.Component {
       
         return(
             <Link to={"/user/"+ this.props.user_id + "/dashboard/"}>
-            <button style={{width: 270}} onClick={this.handleClick} className="list-group-item">
+            <button style={{width: 270, marginTop: 0}} onClick={this.handleClick} className="list-group-item">
                 <span className={icons[this.props.index].gly}></span> {"  " + this.props.name}
                 { (this.props.request_count > 0) ? 
                  <span style={{float: 'right'}} className={icons[this.props.index].label}>{this.props.request_count}</span>
