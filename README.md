@@ -104,5 +104,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 Moment.js Documentation<br>
 http://momentjs.com/docs/#/parsing/ <br>
 
-React-datepicker Documentation <br>
-https://hacker0x01.github.io/react-datepicker/ <br>
+React-daypicker Documentation <br>
+http://react-day-picker.js.org/docs/input<br>

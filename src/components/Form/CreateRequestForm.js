@@ -3,6 +3,7 @@ import DayPickerInput from 'react-day-picker/DayPickerInput';
 import moment from 'moment';
 import './CreateRequestForm.css';
 import { Editor } from './Editor';
+import { Link } from 'react-router-dom';
 
 /**
  * Chua ro mot so muc 
@@ -12,7 +13,7 @@ import { Editor } from './Editor';
  */
 
 export class CreateRequestForm extends React.Component {
-   
+    //props: user_id
     constructor(props) {
         super(props);
         this.state = {
@@ -48,6 +49,9 @@ export class CreateRequestForm extends React.Component {
         !(this.state.deadline_set) ? this.setState({deadline_st: "has-error"}) : this.setState({deadline_st: ""}) 
         !(this.state.content_set) ? this.setState({content_st: "has-error"}) : this.setState({content_st: ""})   
       
+    }
+    cancel() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
     render() {
         const dept_info = [
@@ -128,7 +132,7 @@ export class CreateRequestForm extends React.Component {
                     <div className="row" >
                          <div className="col-lg-12">
                             <label>Nội dung</label>
-                            <Editor onChange={this.handleEditorChange}/>
+                            <Editor placeholder="Nhập vào nội dung" onChange={this.handleEditorChange}/>
                             <div className="form-group">
                                 <label>Choose file to upload</label>
                                 <input type="file" />
@@ -136,7 +140,10 @@ export class CreateRequestForm extends React.Component {
                          </div>
                     </div>
                     
-                    <button type="submit" className="btn btn-primary" onClick={this.validate}>Submit Button</button>
+                    <button type="submit" className="btn btn-primary pull-right" onClick={this.validate}>Submit</button>
+                    <Link to={"/user/:user_id/dashboard"}>
+                    <button type="cancel" className="btn btn-default pull-right" onClick={this.cancel}>Cancel</button>
+                    </Link>
                 </div>    
             </div>
         );

@@ -4,9 +4,7 @@ import React from 'react';
  * @va
  */
 export class Comment extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    
     render() {
         /* temp*/  
         const duration = 10;
