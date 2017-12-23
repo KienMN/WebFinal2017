@@ -18,6 +18,16 @@ class RequestTable extends React.Component {
 	//get tableData
 	//props: status, user_id
 	//status:0 - all, 1 - new, 2 - inprogress, 3 - resolved, 4 - feedback, 5 - closed, 6 - cancelled 
+	
+	// add js for request table
+	componentDidMount() {
+		const s = document.createElement('script');
+    	s.type = 'text/javascript';
+    	s.async = true;
+    	s.src = "RequestTable.js";
+    	document.getElementById("page-wrapper").appendChild(s);
+	}
+
 	render() {
 		return (
 			<div id="page-wrapper">
