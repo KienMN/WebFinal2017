@@ -1,9 +1,7 @@
 import React from 'react';
 import {Link, Route, Router} from 'react-router-dom';
-import $ from 'jquery'
-$.DataTable = require('datatables.net');
 
-class RequestTable extends React.Component {
+export class RequestList extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -23,25 +21,6 @@ class RequestTable extends React.Component {
 	//status:0 - all, 1 - new, 2 - inprogress, 3 - resolved, 4 - feedback, 5 - closed, 6 - cancelled 
 	
 	// add js for request table
-	componentDidMount() {
-		$(document).ready(function() {
-			var t = $('#requestTable').DataTable( {
-				responsive: true,
-				"columnDefs": [ {
-					"searchable": false,
-					"orderable": false,
-					"targets": 0
-				} ],
-				"order": [[ 1, 'asc' ]]
-			} );
-		
-			t.on( 'order.dt search.dt', function () {
-				t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-					cell.innerHTML = i+1;
-				} );
-			} ).draw();
-		});
-	}
 
 	render() {
 		return (
@@ -113,5 +92,3 @@ class TableRow extends React.Component {
 		);
 	}
 }
-
-export default RequestTable;

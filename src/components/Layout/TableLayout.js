@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderNavbar from '../HeaderNavbar';
 import { SideMenu } from '../SideMenu/SideMenu';
+import {RequestList} from '../RequestList';
 import RequestTable from '../RequestTable';
 import {
     Route,
