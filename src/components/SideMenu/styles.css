@@ -1,8 +1,8 @@
 .sidebar {
     z-index: 1;
-    margin-left: 10px;
+    margin-left: 0px;
     margin-bottom: 15px;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 .navbar-default {
     background-color: #f8f8f8;
@@ -15,10 +15,15 @@
     float: right;
 }
 #title {
-    font-size: 18px;
-    margin: 12px;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    margin-left: 5px;
 }
 button.list-group-item:focus {
     border-left-color: #5BC0DE;
     border-left-width: 3px;
+}
+.sidebar-nav {
+    margin-bottom: 5px;
 }

@@ -1,5 +1,11 @@
 import React from 'react';
-import {Link, Route, Router} from 'react-router-dom';
+import $ from 'jquery';
+
+import '../styles/css/dataTables/dataTables.bootstrap.css';
+import '../styles/css/dataTables/dataTables.responsive.css';
+
+$.DataTable = require('datatables.net');
+
 class RequestTable extends React.Component {
 	constructor(props) {
 		super(props);
@@ -15,9 +21,66 @@ class RequestTable extends React.Component {
 				]	
 		}
 	}
+	/*
+	componentDidMount() {
+		fetch('http://localhost:3001/api/v1/requests/2/my',{
+			method: 'GET',
+			mode: 'no-cors',
+			headers: {
+				sessionkey: 'f3821424b2ad64f99caa7009917164e37e0d21144ba83288b55f7a65dc859577edb2bef7d9c80ee0c6d036d0796a510623731c063f04e67312c0e118c2eccada'
+			}
+		}).then(result => {return result.json;
+		}).then(data => {
+			console.log(data.result)
+		});
+	}
+	*/
 	//get tableData
 	//props: status, user_id
 	//status:0 - all, 1 - new, 2 - inprogress, 3 - resolved, 4 - feedback, 5 - closed, 6 - cancelled 
+
+	/*
+	componentDidMount() {
+		const s = document.createElement('script');
+		const s2 = document.createElement('script');
+		
+		s.type = 'text/javascript';
+		s2.type = 'text/javascript';
+		
+		s.src = "jquery.dataTables.min.js";
+		s2.src = "dataTables.bootstrap.min.js";
+
+		document.body.appendChild(s);
+		document.body.appendChild(s2);
+	}
+	*/
+	componentWillMount() {
+		$(document).ready(function() {
+			$('#dataTables-example').DataTable({
+			         responsive: true
+			        });
+			      });
+			      $(document).ready(function() {
+			        var t = $('#requestTable').DataTable( {
+			          responsive: true,
+			          "columnDefs": [ {
+			            "searchable": false,
+			            "orderable": false,
+			            "targets": 0
+			          } ],
+			          "order": [[ 1, 'asc' ]]
+			        } );
+			
+			        t.on( 'order.dt search.dt', function () {
+			          t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+			            cell.innerHTML = i+1;
+			          } );
+			        } ).draw();
+				  });
+	
+		
+	}
+
 	render() {
 		return (
 			<div id="page-wrapper">

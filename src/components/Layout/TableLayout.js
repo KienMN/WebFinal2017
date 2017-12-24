@@ -25,10 +25,10 @@ export class TableLayout extends React.Component {
             <HeaderNavbar />
             <div style={{paddingTop: 70}} className="container-fluid">
                 <div className="row">
-                <div className="col-lg-3">  
+                <div className="col-sm-3">  
                    <SideMenu user_id={this.props.match.params.user_id} />
                 </div>
-                <div id="dashboard"className="col-lg-9">
+                <div id="dashboard" style={{margin: 0}} className="col-sm-9">
                 <Switch>
                     <RequestTable user_id={this.props.match.params.user_id} status={0}/>    
                 </Switch>   

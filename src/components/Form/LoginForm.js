@@ -15,7 +15,19 @@ export class LoginForm extends React.Component {
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
-    
+    componentDidMount() {
+      fetch('http://localhost:3001/api/v1/login',{
+			method: 'POST',
+			//mode: 'no-cors',
+      body: {
+        'username': 'hoanv',
+        'password': '12345678' 
+      }
+		}).then(result => {return result.json;
+		}).then(data => {
+			console.log('1')
+		});
+    }
     handleChange(e) {
       e.target.classList.add('active');
       

@@ -36,7 +36,7 @@ export class SubItem extends React.Component {
             {label: "label label-info", gly: "glyphicon glyphicon-import"},     //inprogress
             {label: "label label-warning", gly: "glyphicon glyphicon-registration-mark"}, //resolved 
             {label: "label label-default", gly: "glyphicon glyphicon-send"}, //feedback
-            {label: "label label-disable", gly: "glyphicon glyphicon-remove-sign"}, //closed
+            {label: "la bel label-disable", gly: "glyphicon glyphicon-remove-sign"}, //closed
             {label: "label label-danger", gly: "glyphicon glyphicon-calendar"} //outofdate
         ];
         //index: 
@@ -45,7 +45,8 @@ export class SubItem extends React.Component {
       
         return(
             <Link to={"/user/"+ this.props.user_id + "/dashboard/"}>
-            <button style={{width: 270, marginTop: 0}} onClick={this.handleClick} className="list-group-item">
+            {/*width phai bang voi width o subSideMenu*/}
+            <button style={{width: '100%', marginTop: 0, marginLeft:0, borderRadius: 0}} onClick={this.handleClick} className="list-group-item">
                 <span className={icons[this.props.index].gly}></span> {"  " + this.props.name}
                 { (this.props.request_count > 0) ? 
                  <span style={{float: 'right'}} className={icons[this.props.index].label}>{this.props.request_count}</span>
